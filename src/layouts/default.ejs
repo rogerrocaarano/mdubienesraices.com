@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#282828" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/js/nav-scroll.js"></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/asesores.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <title><%= site.title %></title>
+  </head>
+  <body
+    class="d-flex flex-column justify-content-between font-textos"
+    style="min-height: 100vh"
+  >
+    <div
+      id="img-fondo"
+      class="fixed-top"
+      style="z-index: -100; height: 100vh"
+    ></div>
+    <%- include('partials/header') %>
+    <div id="content-wraper" class="mb-auto"><%- body %></div>
+    <%- include('partials/footer') %>
+  </body>
+</html>

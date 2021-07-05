@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import "../scss/colors";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.card-custom-border {
+  border-radius: 0.8rem 2.5rem !important;
+}
+.transparencia-header {
+  background-color: rgba($color: $primary, $alpha: 0.3) !important;
+  backdrop-filter: blur(10px);
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+
+.scrolled {
+  background-color: rgba($color: $primary, $alpha: 0.9) !important;
+  backdrop-filter: blur(10px);
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+
+.font-encabezados {
+  font-family: "Lato", sans-serif;
+}
+.font-textos {
+  font-family: "Open Sans", sans-serif;
+}
+#img-fondo {
+  background-image: linear-gradient(
+      rgba(40, 40, 40, 0.7),
+      rgba(40, 40, 40, 1)
+    ),
+    url(/img/fondo-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: sepia(70%) brightness(0.7) contrast(0.55);
+}
+#logo-header {
+  height: auto;
+  width: 8rem;
+  @media (min-width: 330px) {
+    width: 10rem;
+  }
+}
+
+footer {
+  font-family: "Open Sans", sans-serif;
+  h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+  }
+}
+
+#contacto {
+  .icono {
+    width: 1.5em;
+    height: auto;
+  }
+}
+
+#siguenos {
+  .icono {
+    width: 3em;
+    height: auto;
+  }
+}
+.ventajas-asesor {
+  max-width: 15rem;
+}
+.circle {
+  width: 10rem;
+  height: 10rem;
+}
+.bg-primary-transparent {
+  background-color: rgba($color: $primary, $alpha: 0.9) !important;
+  backdrop-filter: blur(10px);
+}

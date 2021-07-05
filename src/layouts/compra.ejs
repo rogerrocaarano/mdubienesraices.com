@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#282828" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/js/nav-scroll.js"></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/asesores.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <title><%= site.title %></title>
+  </head>
+  <body
+    class="d-flex flex-column justify-content-between font-textos"
+    style="min-height: 100vh"
+  >
+    <div
+      id="img-fondo"
+      class="fixed-top"
+      style="z-index: -100; height: 100vh"
+    ></div>
+    <%- include('partials/header') %>
+    <section class="container my5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-xxl-4">
+        <% if (page.inventario) { %> <%
+        page.inventario.forEach(function(inmueble) { %>
+        <div class="col">
+          <div
+            class="
+              card
+              my-3
+              text-white
+              bg-primary
+              border-0
+              shadow-lg
+              card-custom-border
+            "
+          >
+            <div
+              id="carousel<%= inmueble.id %>"
+              class="carousel slide carousel-fade"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="<%= inmueble.imgCarouselActive %>"
+                    class="d-block w-100 card-img-top card-custom-border"
+                  />
+                </div>
+                <% if (page.inventario) { %> <%
+                page.inventario.forEach(function(inmueble)
+                { %>
+                <div class="carousel-item">
+                  <img
+                    src="<%= page.inventario.imgCarousel %>"
+                    class="d-block w-100 card-custom-border"
+                  />
+                </div>
+                <% }) %> <% } %>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouse<%= inmueble.id %>"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carousel<%= inmueble.id %>"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><%= inmueble.direccion %></h5>
+              <p class="card-text"><%= inmueble.detalle %></p>
+              <div class="text-end">
+                <a
+                  href="/<%= inmueble.id %>"
+                  class="btn btn-outline-secondary me-2"
+                  >Detalles</a
+                >
+                <a href="#" class="btn btn-secondary">Contacto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }) %> <% } %>
+      </div>
+    </section>
+    <section><%- body %></section>
+    <%- include('partials/footer') %>
+  </body>
+</html>

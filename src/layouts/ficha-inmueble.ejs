@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#282828" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/js/nav-scroll.js"></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/asesores.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <title><%= page.operacion %> - <%= page.titulo %></title>
+  </head>
+  <body
+    class="d-flex flex-column justify-content-between font-textos"
+    style="min-height: 100vh"
+  >
+    <div
+      id="img-fondo"
+      class="fixed-top"
+      style="z-index: -100; height: 100vh"
+    ></div>
+    <%- include('partials/header') %>
+    <div id="content-wraper" class="mb-auto">
+      <section class="container my-5 text-light">
+        <h1 class="font-encabezados"><%= page.titulo %></h1>
+        <div class="row row-cols-1 row-cols-lg-2 mt-5">
+          <div class="col">
+            <div
+              id="carousel<%= page.id %>"
+              class="
+                carousel
+                slide
+                carousel-fade
+                position-relative
+                px-2
+                ps-lg-0
+                pe-lg-4
+              "
+              data-bs-ride="carousel"
+            >
+              <span
+                class="
+                  badge
+                  bg-secondary
+                  fs-2
+                  position-absolute
+                  top-0
+                  end-0
+                  translate-middle-y
+                  p-3
+                  shadow
+                "
+                style="z-index: 2"
+                ><%= page.precio %></span
+              >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="<%= page.imgCarouselActive %>"
+                    class="d-block w-100 card-custom-border"
+                  />
+                </div>
+                <% if (page.imgCarousel) { %> <%
+                page.imgCarousel.forEach(function(imgCarousel) { %>
+                <div class="carousel-item">
+                  <img
+                    src="<%= imgCarousel %>"
+                    class="d-block w-100 card-custom-border"
+                  />
+                </div>
+                <% }) %> <% } %>
+              </div>
+              <button
+                class="carousel-control-prev ms-4 ms-lg-0"
+                type="button"
+                data-bs-target="#carousel<%= page.id %>"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next me-4 me-lg-4"
+                type="button"
+                data-bs-target="#carousel<%= page.id %>"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div>Iconos Características</div>
+          </div>
+          <div class="col ps-lg-5">
+            <div class="text-end fs-3 mb-3">
+              <a href="<%= page.linkFacebook %>"><i class="bi bi-facebook text-secondary ps-1"></i></i></a>
+              <a href="<%= page.linkPDF %>"><i class="bi bi-file-earmark-pdf text-secondary ps-1"></i></a>
+            </div>
+            <%- body %>
+        </div>
+        </div>
+      </section>
+    </div>
+    <%- include('partials/footer') %>
+  </body>
+</html>

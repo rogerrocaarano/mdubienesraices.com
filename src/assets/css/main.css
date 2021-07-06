@@ -11677,3 +11677,8 @@ footer h2, footer .h2 {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+
+.card-title {
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}

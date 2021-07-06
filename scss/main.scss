@@ -31,10 +31,7 @@
   font-family: "Open Sans", sans-serif;
 }
 #img-fondo {
-  background-image: linear-gradient(
-      rgba(40, 40, 40, 0.7),
-      rgba(40, 40, 40, 1)
-    ),
+  background-image: linear-gradient(rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 1)),
     url(/img/fondo-header.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -80,4 +77,8 @@ footer {
 .bg-primary-transparent {
   background-color: rgba($color: $primary, $alpha: 0.9) !important;
   backdrop-filter: blur(10px);
+}
+.card-title {
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
 }

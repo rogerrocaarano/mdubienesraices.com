@@ -6,6 +6,10 @@ window.onload = function() {
         // these IDs from the previous steps
         emailjs.sendForm('contact_service', 'contact_form', this)
             .then(function() {
+                document.getElementById('FormContactoNombre').value='';
+                document.getElementById('FormContactoEmail').value='';
+                document.getElementById('FormContactoTlf').value='';
+                document.getElementById('FormContactoTexto').value='';
                 console.log('SUCCESS!');
             }, function(error) {
                 console.log('FAILED...', error);

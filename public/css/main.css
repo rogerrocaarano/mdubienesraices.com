@@ -11595,6 +11595,10 @@ fieldset:disabled .btn {
   }
 }
 
+html {
+  scroll-padding-top: 3rem;
+}
+
 .card-custom-border {
   border-radius: 0.8rem 2.5rem !important;
 }

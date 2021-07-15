@@ -1,14 +1,18 @@
-<section class="container py-3">
-  <h1 class="text-white font-encabezados mb-3">Contácto</h1>
-  <div class="row row-cols-1 row-cols-lg-2">
+<section id="contacto" class="container py-5">
+  <h1 class="mb-4 font-encabezados text-white text-center">Contácto</h1>
+  <p class="mb-4 text-white text-center fs-5">
+    Envíanos tu consulta y atendemos tu requerimiento inmobiliario de manera
+    personalizada.
+  </p>
+  <div class="row row-cols-1 row-cols-lg-2 align-items-center">
     <div class="col col-lg-4">
-      <div class="mb-3 text-white fs-4">
-        Envíenos su consulta y atendemos su requerimiento inmobiliario de manera
-        personalizada.
-      </div>
-      <div class="circle bg-secondary rounded-circle mx-auto mb-2"></div>
+      <img
+        class="img-fluid px-5 pe-sm-5"
+        src="/img/iconos/form-email.svg"
+        alt=""
+      />
     </div>
-    <form id="contact-form" class="col col-lg-8">
+    <form id="contact-form" class="col col-lg-8 mt-4 mt-sm-0">
       <input type="hidden" name="contact_number" />
       <div class="mb-3">
         <label
@@ -25,35 +29,37 @@
           placeholder="Ingrese su nombre y apellido."
         />
       </div>
-      <div class="mb-3">
-        <label
-          for="FormContactoEmail"
-          class="form-label text-white font-encabezados fs-5"
-          >Email</label
-        >
-        <input
-          required
-          type="email"
-          class="form-control"
-          id="FormContactoEmail"
-          name="form_email"
-          placeholder="nombre@dominio.com"
-        />
-      </div>
-      <div class="mb-3">
-        <label
-          for="FormContactoTlf"
-          class="form-label text-white font-encabezados fs-5"
-          >Nro. de Teléfono</label
-        >
-        <input
-          required
-          type="tel"
-          class="form-control"
-          id="FormContactoTlf"
-          name="form_telefono"
-          placeholder="Ingrese su número de teléfono."
-        />
+      <div class="row row-cols-1 row-cols-sm-2">
+        <div class="col mb-3">
+          <label
+            for="FormContactoEmail"
+            class="form-label text-white font-encabezados fs-5"
+            >Email</label
+          >
+          <input
+            required
+            type="email"
+            class="form-control"
+            id="FormContactoEmail"
+            name="form_email"
+            placeholder="nombre@dominio.com"
+          />
+        </div>
+        <div class="col mb-3">
+          <label
+            for="FormContactoTlf"
+            class="form-label text-white font-encabezados fs-5"
+            >Nro. de Teléfono</label
+          >
+          <input
+            required
+            type="tel"
+            class="form-control"
+            id="FormContactoTlf"
+            name="form_telefono"
+            placeholder="Ingrese su número de teléfono."
+          />
+        </div>
       </div>
       <div class="mb-3">
         <label
@@ -69,8 +75,8 @@
           name="form_message"
         ></textarea>
       </div>
-      <button class="btn btn-secondary" type="submit" value="Send">
-        Enviar
+      <button class="btn btn-secondary px-4" type="submit" value="Send">
+        <i class="bi bi-envelope me-2"></i>Enviar mensaje
       </button>
     </form>
   </div>

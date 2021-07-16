@@ -11,8 +11,10 @@ window.onload = function() {
                 document.getElementById('FormContactoTlf').value='';
                 document.getElementById('FormContactoTexto').value='';
                 console.log('SUCCESS!');
+                alert("Mensaje enviado.");
             }, function(error) {
                 console.log('FAILED...', error);
+                alert("Por favor, introdusca todos sus datos.");
             });
     });
 }

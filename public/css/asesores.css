@@ -11594,17 +11594,3 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-
-#asesores {
-  font-family: 'Open Sans', sans-serif;
-}
-
-#asesores h1, #asesores .h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-}
-
-.contacto-asesor {
-  margin-bottom: 2em;
-  width: 20em;
-}

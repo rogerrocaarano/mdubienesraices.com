@@ -89,3 +89,23 @@ footer {
 .dev-test {
   height: 100%;
 }
+
+#asesores {
+  font-family: "Open Sans", sans-serif;
+  h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+  }
+}
+
+.contacto-asesor {
+  margin-bottom: 2em;
+  width: 20em;
+}
+.form-control {
+  background-color: rgba($color: $white, $alpha: 0.8);
+  border: none;
+  &:focus {
+    background-color: rgba($color: $white, $alpha: 0.95);
+  }
+}

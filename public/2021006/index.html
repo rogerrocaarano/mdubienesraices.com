@@ -270,7 +270,9 @@
           <div class="col ps-lg-5">
             <div class="text-end fs-3 mb-3">
               <a href="https://www.facebook.com/BienesRaicesMDU/posts/469179000705755"><i class="bi bi-facebook text-secondary ps-1"></i></i></a>
+              <!--
               <a href="http://via.placeholder.com/400x300?text=3"><i class="bi bi-file-earmark-pdf text-secondary ps-1"></i></a>
+              -->
             </div>
             
 <p>
@@ -303,6 +305,98 @@
         </div>
       </section>
     </div>
+    <section id="contacto" class="container py-5">
+  <h1 class="mb-4 font-encabezados text-white text-center">Contácto</h1>
+  <p class="mb-4 text-white text-center fs-5">
+    Envíanos tu consulta y atendemos tu requerimiento inmobiliario de manera
+    personalizada.
+  </p>
+  <div class="row row-cols-1 row-cols-lg-2 align-items-center">
+    <div class="col col-lg-4">
+      <img
+        class="img-fluid px-5 pe-sm-5"
+        src="/img/iconos/form-email.svg"
+        alt=""
+      />
+    </div>
+    <form id="contact-form" class="col col-lg-8 mt-4 mt-sm-0">
+      <input type="hidden" name="contact_number" />
+      <div class="mb-3">
+        <label
+          for="FormContactoNombre"
+          class="form-label text-white font-encabezados fs-5"
+          >Nombre</label
+        >
+        <input
+          required
+          type="text"
+          class="form-control"
+          id="FormContactoNombre"
+          name="form_name"
+          placeholder="Ingrese su nombre y apellido."
+        />
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2">
+        <div class="col mb-3">
+          <label
+            for="FormContactoEmail"
+            class="form-label text-white font-encabezados fs-5"
+            >Email</label
+          >
+          <input
+            required
+            type="email"
+            class="form-control"
+            id="FormContactoEmail"
+            name="form_email"
+            placeholder="nombre@dominio.com"
+          />
+        </div>
+        <div class="col mb-3">
+          <label
+            for="FormContactoTlf"
+            class="form-label text-white font-encabezados fs-5"
+            >Nro. de Teléfono</label
+          >
+          <input
+            required
+            type="tel"
+            class="form-control"
+            id="FormContactoTlf"
+            name="form_telefono"
+            placeholder="Ingrese su número de teléfono."
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label
+          for="FormContactoTexto"
+          class="form-label text-white font-encabezados fs-5"
+          >Mensaje</label
+        >
+        <textarea
+          required
+          id="FormContactoTexto"
+          rows="5"
+          class="form-control"
+          name="form_message"
+        ></textarea>
+      </div>
+      <div
+        class="g-recaptcha mb-3"
+        data-sitekey="6LcXi50bAAAAAKM3gnK2S3g58ebTKnwBSfGsxerW"
+      ></div>
+      <button
+        class="btn btn-secondary px-4 align-self-center"
+        type="submit"
+        value="Send"
+      >
+        <i class="bi bi-envelope me-2"></i>Enviar mensaje
+      </button>
+    </form>
+  </div>
+</section>
+
     <footer class="container-fluid bg-primary text-secondary px-0 pt-3">
   <div class="container">
     <div class="row row-cols-1 row-cols-md-auto justify-content-between">

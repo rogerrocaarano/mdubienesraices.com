@@ -1,1 +1,1 @@
-rclone sync public atl01:hosting/mdubienesraices.com
+rclone sync public atl01:hosting/mdubienesraices.com/html -P
